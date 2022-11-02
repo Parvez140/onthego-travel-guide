@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "City Selfie Tour",
+    "price": 120,
+    "description": "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin",
+    "img": "https://i.ibb.co/XXMkh3h/service-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Vanice Cannal",
+    "price": 680,
+    "description": "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin",
+    "img": "https://i.ibb.co/3sT9mJY/service-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Vanice Full City",
+    "price": 1650,
+    "description": "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin",
+    "img": "https://i.ibb.co/16QGNDV/service-3.jpg"
+  }
+]
