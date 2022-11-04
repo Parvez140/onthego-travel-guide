@@ -5,12 +5,9 @@ import { Link, useParams } from 'react-router-dom';
 const GuideDetails = () => {
     const  {serviceId}   = useParams();
     return (
-        <div>
+        <div className='text-center'>
             <h1>Guide Details {serviceId}</h1>
-            <Button  as={Link} to='/chekOut'>ChekOut</Button>
-            <Link to="/checkOut">
-            <button className='btn btn-primary'>Proceed CheckOut</button>
-            </Link>
+            <Button  as={Link} to='/checkOut'>ChekOut</Button>
         </div>
     );
 };
