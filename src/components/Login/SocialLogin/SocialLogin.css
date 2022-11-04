@@ -2,7 +2,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
 }
 .social-button{
     margin: 20px;
+    border: 1px solid #29B2B8;
+    border-radius: 5px;
+}
+.social-button:hover{
+    background-color: #29B2B8;
 }

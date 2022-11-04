@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import './SocialLogin.css';
 import google from '../../../images/social-icon/google.png';
 import github from '../../../images/social-icon/github.png';
@@ -28,18 +27,18 @@ const SocialLogin = () => {
   return (
     <div>
       <div className="d-flex align-items-center">
-        <div style={{ height: "1px" }} className="bg-primary w-50"></div>
+        <div style={{ height: "1px","backgroundColor":"#29B2B8" }} className="w-50"></div>
         <p className="mt-2 px-2">or</p>
-        <div style={{ height: "1px" }} className="bg-primary w-50"></div>
+        <div style={{ height: "1px","backgroundColor":"#29B2B8" }} className="w-50"></div>
       </div>
       {errorElement}
       <br /><br />
       <div className="social">
-        <Button onClick={() => signInWithGoogle()}
-         className="social-button"><img src={google} alt="" /></Button>
-        <Button onClick={() => signInWithGithub()}
-         className="social-button"><img src={github} alt="" /></Button>
-        <Button className="social-button"><img src={facebook} alt="" /></Button>
+        <button onClick={() => signInWithGoogle()}
+         className="social-button"><img src={google} alt="" /></button>
+        <button onClick={() => signInWithGithub()}
+         className="social-button"><img src={github} alt="" /></button>
+        <button className="social-button" disabled><img src={facebook} alt="" /></button>
       </div>
     </div>
   );
