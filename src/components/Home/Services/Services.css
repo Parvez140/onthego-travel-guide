@@ -10,3 +10,10 @@
     margin: 0 auto;
     margin-top: 70px;
 }
+.cards-title h2{
+    color: #29B2B8;
+}
+.cards-title p{
+    color: gray;
+    font-size: 18px;
+}

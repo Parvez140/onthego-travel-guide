@@ -4,6 +4,7 @@ import './Blogs.css';
 const Blog = () => {
   return (
     <div className="container">
+      <h2 className="blogs-title">Our Blogs</h2>
       <div className="blogs-card">
         <div className="blog-card">
           <h5>

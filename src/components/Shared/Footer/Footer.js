@@ -31,7 +31,7 @@ const Footer = () => {
 
         </div>
         <div className="col-3">
-            <h5>Followus on</h5>
+            <h5>Follow us on</h5>
         </div>
       </div>
       <div className="text-center  mt-5">

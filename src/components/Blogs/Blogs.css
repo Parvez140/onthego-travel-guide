@@ -1,8 +1,13 @@
-
+.blogs-title{
+  text-align: center;
+  margin-top: 20px;
+  color: #29B2B8;
+}
 .blogs-card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
+  margin: 50px 0;
 }
 .blog-card{
   border: 2px solid #FFBD30;

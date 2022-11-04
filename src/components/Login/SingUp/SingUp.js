@@ -3,18 +3,15 @@ import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init'
-import { useState } from "react";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import Loading from "../../Shared/Loading/Loading";
 
 
 const SingUp = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const [
     createUserWithEmailAndPassword,
     user,
     loading,
-    error,
   ] = useCreateUserWithEmailAndPassword(auth);
 
 
@@ -33,10 +30,14 @@ const SingUp = () => {
   if(user){
     navigate('/home');
   }
+  if (loading) {
+    return <Loading/>
+  }
+
 
   return (
     <div className="container w-50 mx-auto">
-      <h2 className="text-primary text-center mt-2">Please Sing up</h2>
+      <h2 className="text-center mt-2" style={{"color":"#29B2B8"}}>Please Sing up</h2>
       <form onSubmit={handleSingup}>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Control name="name" type="name" placeholder="Enter name" required />
@@ -52,10 +53,10 @@ const SingUp = () => {
         </Button>
       </form>
       <p>
-        Already have an account?{" "}
+        Already have an account?
         <Link to="/login" onClick={navigateLogin} className="text-primary pe-auto text-decoration-none">
           Please Login
-        </Link>{" "}
+        </Link>
       </p>
       <SocialLogin/>
     </div>

@@ -16,7 +16,7 @@ const Header = () => {
   }
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg"  className="navbar">
+      <Navbar collapseOnSelect expand="lg"  className="navbar ">
         <Container>
           <Navbar.Brand as={Link} to="/" className="logo">
             OnTheGo.
@@ -37,9 +37,6 @@ const Header = () => {
               </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link className='navbar-menu' as={Link} to="/singup">
-                Sing up
-              </Nav.Link>
               {
                 user ? 
                 <Nav.Link as={Link} onClick={handleSingOut}  className='navbar-menu'>Sing Out</Nav.Link>
