@@ -23,11 +23,11 @@ const Footer = () => {
             <p>New Year, New Resolutions!</p>
             <p>September 7, 2016</p>
         </div>
-        <div className="col-3">
+        <div className="col-3 newsletter-input ">
             <h5>Subscribe to our Newsletter</h5>
             <p>Join our Newsletter to know our Special news And Discout.</p>
-            <input type="email" name="email" placeholder="Email" /><br />
-            <input type="submit" value="SUBCRIBES" width="100%" />
+            <input type="email" name="email" placeholder="  Email" />
+            <input className="newsletter-button" type="submit" value="SUBCRIBES" />
 
         </div>
         <div className="col-3">
