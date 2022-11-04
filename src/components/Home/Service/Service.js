@@ -10,15 +10,15 @@ const Service = ({ service }) => {
     nevigate(`/guideDetails/${id} ${name}`);
   };
   return (
-    <div className="">
-      <CardGroup className="card">
-        <Card className="p-2">
+    <div>
+      <CardGroup>
+        <Card id="service-card">
           <Card.Img variant="top" src={img} />
           <Card.Body>
-            <Card.Title>{name}</Card.Title>
-            <Card.Text>{description}</Card.Text>
+            <Card.Title className="pt-2" style={{"fontWeight": "700","fontSize": "22px"}}>{name}</Card.Title>
+            <Card.Text className="pt-2" style={{"color":"gray"}}>{description}</Card.Text>
           </Card.Body>
-          <input
+          <input className="hire-button"
             onClick={() => nevigateToGuideDetails(id, name)}
             type="button"
             value="Hire a Guide"

@@ -1,0 +1,18 @@
+#service-card{
+    border: 0.1px solid #29B2B8;
+    padding: 15px;
+    height: 500px;
+}
+
+.hire-button{
+    background-color: #29B2B8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px;
+}
+.hire-button:hover{
+    background-color: #fcc858;
+}

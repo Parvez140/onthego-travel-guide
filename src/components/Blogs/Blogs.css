@@ -1,0 +1,19 @@
+
+.blogs-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.blog-card{
+  border: 2px solid #FFBD30;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+.blog-card h5{
+    color: #FFBD30;
+}
+.blog-card p{
+    color: gray;
+}
+
