@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 const Service = ({ service }) => {
   const { id, name, img, description } = service;
   const nevigate = useNavigate();
-  const nevigateToChekOut = (service) => {
-    nevigate(`/chekOut/${id}`);
+  const nevigateToGuideDetails = (id, name) => {
+    nevigate(`/guideDetails/${id} ${name}`);
   };
   return (
     <div className="">
@@ -19,8 +19,8 @@ const Service = ({ service }) => {
             <Card.Text>{description}</Card.Text>
           </Card.Body>
           <input
-            onClick={() => nevigateToChekOut(id)}
-            type="submit"
+            onClick={() => nevigateToGuideDetails(id, name)}
+            type="button"
             value="Hire a Guide"
           />
         </Card>

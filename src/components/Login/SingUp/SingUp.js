@@ -1,11 +1,26 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init'
+import { useState } from "react";
+import SocialLogin from "../SocialLogin/SocialLogin";
+
 
 const SingUp = () => {
-  const nevigate = useNavigate();
-  const nevigateLogin = () => {
-    nevigate('/login');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth);
+
+
+  const navigate = useNavigate();
+  const navigateLogin = () => {
+    navigate('/login');
   }
 
     const handleSingup = event => {
@@ -13,7 +28,10 @@ const SingUp = () => {
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-    console.log(name, email, password);
+    createUserWithEmailAndPassword(email, password);
+  }
+  if(user){
+    navigate('/home');
   }
 
   return (
@@ -35,10 +53,11 @@ const SingUp = () => {
       </form>
       <p>
         Already have an account?{" "}
-        <Link to="/login" onClick={nevigateLogin} className="text-primary pe-auto text-decoration-none">
+        <Link to="/login" onClick={navigateLogin} className="text-primary pe-auto text-decoration-none">
           Please Login
         </Link>{" "}
       </p>
+      <SocialLogin/>
     </div>
   );
 };
