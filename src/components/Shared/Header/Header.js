@@ -16,7 +16,7 @@ const Header = () => {
   }
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="navbar">
+      <Navbar collapseOnSelect expand="lg"  className="navbar">
         <Container>
           <Navbar.Brand as={Link} to="/" className="logo">
             OnTheGo.
@@ -24,27 +24,27 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={Link} to="/home">
+              <Nav.Link className='navbar-menu' as={Link} to="/home">
                 Home
               </Nav.Link>
-              <Nav.Link to="#services">Services</Nav.Link>
-              <Nav.Link as={Link} to="/tours">Tours</Nav.Link>
-              <Nav.Link as={Link} to="/blogs">
+              <Nav.Link className='navbar-menu' to="#services">Services</Nav.Link>
+              <Nav.Link className='navbar-menu' as={Link} to="/tours">Tours</Nav.Link>
+              <Nav.Link className='navbar-menu' as={Link} to="/blogs">
                 Blogs
               </Nav.Link>
-              <Nav.Link as={Link} to="/about">
+              <Nav.Link className='navbar-menu' as={Link} to="/about">
                 About
               </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link as={Link} to="/singup">
+              <Nav.Link className='navbar-menu' as={Link} to="/singup">
                 Sing up
               </Nav.Link>
               {
                 user ? 
-                <Nav.Link as={Link} onClick={handleSingOut} >Sing Out</Nav.Link>
+                <Nav.Link as={Link} onClick={handleSingOut}  className='navbar-menu'>Sing Out</Nav.Link>
                 :
-                <Nav.Link as={Link} to="/login">
+                <Nav.Link as={Link} to="/login" className='navbar-menu'>
                 Login
               </Nav.Link>
               }

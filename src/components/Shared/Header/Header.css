@@ -1,5 +1,15 @@
 .navbar .logo{
     color: #FFBD30;
     font-weight: 900;
-    font-size: 28px;
+    font-size: 32px;
+}
+.navbar .navbar-menu{
+    color: #212121;
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 15px;
+}
+.navbar .navbar-menu:hover{
+    color: #29B2B8;
+    border-bottom: 2.5px solid #29B2B8;
 }
